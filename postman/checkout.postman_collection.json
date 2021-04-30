@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "cfc15fac-fe9b-4e79-896d-2718d378c58b",
+		"name": "checkout",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CheckoutValidationFailed",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"\",\n\"lastName\":\"\",\n\"email\":\"\",\n\"address\":\"\",\n\"complement\":\"\",\n\"country\":\"\",\n\"state\":\"\",\n\"cep\":\"\",\n\"saveAddress\": null,\n\"saveInfo\": null,\n\"paymentMethod\":\"\",\n\"cardName\":\"\",\n\"cardNumber\":\"\",\n\"cardDate\":\"\",\n\"cardCvv\":\"\",\n\"products\":[]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/checkout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"checkout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckoutStatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"\",\n\"lastName\":\"\",\n\"email\":\"\",\n\"address\":\"\",\n\"complement\":\"\",\n\"country\":\"\",\n\"state\":\"\",\n\"cep\":\"\",\n\"saveAddress\": null,\n\"saveInfo\": null,\n\"paymentMethod\":\"\",\n\"cardName\":\"\",\n\"cardNumber\":\"\",\n\"cardDate\":\"\",\n\"cardCvv\":\"\",\n\"products\":[]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/checkout/status/b787021d-83a5-47ab-a216-d93f494bb25e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"checkout",
+						"status",
+						"b787021d-83a5-47ab-a216-d93f494bb25e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckoutValidationSuccess",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"John\",\n\"lastName\":\"Doe\",\n\"email\":\"john@doe.com\",\n\"address\":\"Travessa Advogado Hesmone Saraiva Granjeiro,179,Trinta e Um de Março,Boa Vista\",\n\"complement\":\"\",\n\"country\":\"BR\",\n\"state\":\"RR\",\n\"cep\":\"69305-360\",\n\"saveAddress\": true,\n\"saveInfo\": true,\n\"paymentMethod\":\"CC\",\n\"cardName\":\"John Doe\",\n\"cardNumber\":\"5382902224819668\",\n\"cardDate\":\"2022-02-27\",\n\"cardCvv\":\"873\",\n\"products\":[\"example\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/checkout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"checkout",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
